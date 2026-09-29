@@ -1,3 +1,127 @@
+/* ===== RESET BÁSICO ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== VARIÁVEIS DE COR ===== */
+:root {
+  --lilas-claro: #d9c7f0;
+  --lilas-medio: #b79ce0;
+  --rosa-claro: #fbd6e4;
+  --rosa-medio: #f4a6c4;
+  --texto-escuro: #3a2e4a;
+  --branco: #ffffff;
+  --verde: #4caf50;
+  --laranja: #e67e22;
+  --cinza: #9e9e9e;
+}
+
+/* ===== CORPO DA PÁGINA ===== */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #faf5ff;
+  color: var(--texto-escuro);
+  padding: 16px;
+  line-height: 1.4;
+}
+
+/* ===== CABEÇALHO ===== */
+.cabecalho {
+  text-align: center;
+  background-color: var(--lilas-claro);
+  padding: 20px;
+  border-radius: 16px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.cabecalho h1 {
+  font-size: 1.8rem;
+  color: var(--texto-escuro);
+}
+
+.subtitulo {
+  font-size: 1rem;
+  color: #5c4a70;
+  margin-top: 6px;
+}
+
+/* ===== CARDS DE RESUMO ===== */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.card {
+  background-color: var(--rosa-claro);
+  border-radius: 14px;
+  padding: 16px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.card h3 {
+  font-size: 0.85rem;
+  color: #7a5b8c;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.card p {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--texto-escuro);
+}
+
+/* ===== TABELA ===== */
+.tabela-container {
+  overflow-x: auto;
+}
+
+.boletim {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--branco);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.boletim thead {
+  background-color: var(--lilas-medio);
+  color: var(--branco);
+}
+
+.boletim th,
+.boletim td {
+  padding: 10px 12px;
+  text-align: center;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.boletim th:first-child,
+.boletim td:first-child {
+  text-align: left;
+}
+
+.boletim tbody tr {
+  border-bottom: 1px solid #f0e6f7;
+}
+
+.boletim tbody tr:last-child {
+  border-bottom: none;
+}
+
+.boletim tbody tr:hover {
+  background-color: #faf0ff;
+}
+
 /* ===== ETIQUETAS DE SITUAÇÃO ===== */
 .etiqueta {
   display: inline-block;
@@ -5,21 +129,39 @@
   border-radius: 20px;
   font-size: 0.78rem;
   font-weight: bold;
-  background-color: #faf5ff; /* fundo clarinho */
-  border: 1px solid #eee0f5;
 }
 
-/* "Bom desempenho" → texto roxo escuro */
+/* "Bom desempenho" → fundo verde, texto roxo escuro */
 .etiqueta.bom {
-  color: #5b2a86;
+  background-color: var(--verde);
+  color: #4b1e7a;
 }
 
-/* "Atenção" → texto rosa escuro */
+/* "Atenção" → fundo laranja, texto rosa escuro */
 .etiqueta.atencao {
-  color: #c2185b;
+  background-color: var(--laranja);
+  color: #a01050;
 }
 
-/* "Nota ainda não disponível" → texto vermelho */
+/* "Nota ainda não disponível" → fundo cinza, texto vermelho */
 .etiqueta.indisponivel {
-  color: #d32f2f;
+  background-color: var(--cinza);
+  color: #c62828;
+}
+
+/* ===== RESPONSIVIDADE (CELULAR) ===== */
+@media (max-width: 600px) {
+  .cabecalho h1 {
+    font-size: 1.4rem;
+  }
+
+  .card p {
+    font-size: 1.1rem;
+  }
+
+  .boletim th,
+  .boletim td {
+    padding: 8px;
+    font-size: 0.82rem;
+  }
 }
