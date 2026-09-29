@@ -131,16 +131,16 @@ body {
   font-weight: bold;
 }
 
-/* "Bom desempenho" → fundo verde, texto roxo escuro */
+/* "Bom desempenho" → fundo verde, texto roxo */
 .etiqueta.bom {
   background-color: var(--verde);
-  color: #4b1e7a;
+  color: #7b2cbf;
 }
 
-/* "Atenção" → fundo laranja, texto rosa escuro */
+/* "Atenção" → fundo laranja, texto rosa */
 .etiqueta.atencao {
   background-color: var(--laranja);
-  color: #a01050;
+  color: #e91e8c;
 }
 
 /* "Nota ainda não disponível" → fundo cinza, texto vermelho */
