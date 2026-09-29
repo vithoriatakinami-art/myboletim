@@ -123,29 +123,28 @@ body {
 }
 
 /* ===== ETIQUETAS DE SITUAÇÃO ===== */
+/* Todos os balões com fundo lilás claro; só o texto muda de cor. */
 .etiqueta {
   display: inline-block;
   padding: 4px 10px;
   border-radius: 20px;
   font-size: 0.78rem;
   font-weight: bold;
+  background-color: var(--lilas-claro);
 }
 
-/* "Bom desempenho" → fundo verde, texto roxo */
+/* "Bom desempenho" → texto rosa */
 .etiqueta.bom {
-  background-color: var(--verde);
-  color: #7b2cbf;
-}
-
-/* "Atenção" → fundo laranja, texto rosa */
-.etiqueta.atencao {
-  background-color: var(--laranja);
   color: #e91e8c;
 }
 
-/* "Nota ainda não disponível" → fundo cinza, texto vermelho */
+/* "Atenção" → texto rosa claro */
+.etiqueta.atencao {
+  color: #f4a6c4;
+}
+
+/* "Nota ainda não disponível" → texto vermelho */
 .etiqueta.indisponivel {
-  background-color: var(--cinza);
   color: #c62828;
 }
 
