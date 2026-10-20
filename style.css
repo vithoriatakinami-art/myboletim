@@ -176,4 +176,111 @@ body {
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.card {
+  background-color: var(--rosa-claro);
+  border-radius: 14px;
+  padding: 16px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.card h3 {
+  font-size: 0.85rem;
+  color: #7a5b8c;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.card p {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--texto-escuro);
+}
+
+/* ===== TABELA ===== */
+.tabela-container {
+  overflow-x: auto;
+}
+
+.boletim {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--branco);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.boletim thead {
+  background-color: var(--lilas-medio);
+  color: var(--branco);
+}
+
+.boletim th,
+.boletim td {
+  padding: 10px 12px;
+  text-align: center;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.boletim th:first-child,
+.boletim td:first-child {
+  text-align: left;
+}
+
+.boletim tbody tr {
+  border-bottom: 1px solid #f0e6f7;
+}
+
+.boletim tbody tr:last-child {
+  border-bottom: none;
+}
+
+.boletim tbody tr:hover {
+  background-color: #faf0ff;
+}
+
+/* ===== ETIQUETAS DE SITUAÇÃO ===== */
+.etiqueta {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: bold;
+  background-color: var(--lilas-claro);
+}
+
+.etiqueta.bom {
+  color: #e91e8c;
+}
+
+.etiqueta.atencao {
+  color: #f4a6c4;
+}
+
+.etiqueta.indisponivel {
+  color: #c62828;
+}
+
+/* ===== RESPONSIVIDADE (CELULAR) ===== */
+@media (max-width: 600px) {
+  .cabecalho h1 {
+    font-size: 1.4rem;
+  }
+
+  .card p {
+    font-size: 1.1rem;
+  }
+
+  .boletim th,
+  .boletim td {
+    padding: 8px;
+    font-size: 0.82rem;
+  }
+}
