@@ -14,30 +14,58 @@
     <p class="subtitulo">9º Ano — Estudante Exemplo</p>
   </header>
 
-  <!-- Cards de resumo (preenchidos pelo JavaScript) -->
-  <section class="cards" id="cards">
-    <!-- Os cards serão criados automaticamente pelo script.js -->
+  <!-- Área de Acesso por PIN -->
+  <section class="area-login" id="areaLogin">
+    <div class="card-login">
+      <h2>Acesso ao Boletim</h2>
+      <p class="info-estudante">Turma: <strong>9C</strong> | Chamada: <strong>30</strong></p>
+      
+      <div class="grupo-campo">
+        <label for="campoPin">PIN de acesso:</label>
+        <input type="password" id="campoPin" placeholder="Digite seu PIN" autocomplete="off" />
+      </div>
+
+      <button id="btnEntrar" class="btn-acao">Entrar</button>
+      <p id="mensagemLogin" class="mensagem-status"></p>
+    </div>
   </section>
 
-  <!-- Tabela de notas -->
-  <section class="tabela-container">
-    <table class="boletim" id="tabelaBoletim">
-      <thead>
-        <tr>
-          <th>Disciplina</th>
-          <th>1º Tri</th>
-          <th>2º Tri</th>
-          <th>3º Tri</th>
-          <th>Média</th>
-          <th>Faltas</th>
-          <th>Situação</th>
-        </tr>
-      </thead>
-      <tbody id="corpoTabela">
-        <!-- As linhas serão criadas automaticamente pelo script.js -->
-      </tbody>
-    </table>
-  </section>
+  <!-- Conteúdo Principal do Boletim (Escondido até realizar o login) -->
+  <main id="conteudoBoletim" class="escondido">
+    
+    <!-- Painel de Ações / Edição -->
+    <section class="painel-acoes">
+      <button id="btnAlternarEdicao" class="btn-acao">Alterar dados</button>
+      <button id="btnSalvar" class="btn-acao btn-salvar escondido">Salvar alterações</button>
+      <span id="mensagemStatus" class="mensagem-status"></span>
+    </section>
+
+    <!-- Cards de resumo (preenchidos pelo JavaScript) -->
+    <section class="cards" id="cards">
+      <!-- Os cards serão criados automaticamente pelo script.js -->
+    </section>
+
+    <!-- Tabela de notas -->
+    <section class="tabela-container">
+      <table class="boletim" id="tabelaBoletim">
+        <thead>
+          <tr>
+            <th>Disciplina</th>
+            <th>1º Tri</th>
+            <th>2º Tri</th>
+            <th>3º Tri</th>
+            <th>Média</th>
+            <th>Faltas</th>
+            <th>Situação</th>
+          </tr>
+        </thead>
+        <tbody id="corpoTabela">
+          <!-- As linhas serão criadas automaticamente pelo script.js -->
+        </tbody>
+      </table>
+    </section>
+
+  </main>
 
   <!-- Liga o JavaScript no final da página -->
   <script src="script.js"></script>
